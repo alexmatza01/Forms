@@ -1,6 +1,6 @@
 <?php
 
-namespace Interactions\FormBundle\Repository;
+namespace Interactions\ValidationBundle\Repository;
 
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Interactions\FormBundle\Entity\Cities;

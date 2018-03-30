@@ -1,11 +1,11 @@
 <?php
 
-namespace Interactions\FormBundle\Entity;
+namespace Interactions\ValidationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-use Interactions\FormBundle\Validator\Constraints as InteractionAssert;
+use Interactions\ValidationBundle\Validator\Constraints as InteractionAssert;
 /**
  * @ORM\Entity(repositoryClass="Interactions\Repository\DomoRepository")
  * @UniqueEntity("Email")

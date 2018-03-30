@@ -6,10 +6,10 @@
  * Time: 11:40 AM
  */
 
-namespace Interactions\FormBundle\Form\Type;
-use Interactions\FormBundle\Entity\Cities;
-use Interactions\FormBundle\Entity\Counties;
-use Interactions\FormBundle\Form\EventListener\AddNameFieldSubscriber;
+namespace Interactions\ValidationBundle\Form\Type;
+use Interactions\ValidationBundle\Entity\Cities;
+use Interactions\ValidationBundle\Entity\Counties;
+use Interactions\ValidationBundle\Form\EventListener\AddNameFieldSubscriber;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;

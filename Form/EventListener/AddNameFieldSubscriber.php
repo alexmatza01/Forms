@@ -6,7 +6,7 @@
  * Time: 12:55 PM
  */
 
-namespace Interactions\FormBundle\Form\EventListener;
+namespace Interactions\ValidationBundle\Form\EventListener;
 
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormEvent;

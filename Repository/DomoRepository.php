@@ -1,8 +1,8 @@
 <?php
 
-namespace Interactions\FormBundle\Repository;
+namespace Interactions\ValidationBundle\Repository;
 
-use Interactions\FormBundle\Entity\Domo;
+use Interactions\ValidationBundle\Entity\Domo;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 

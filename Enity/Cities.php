@@ -1,6 +1,6 @@
 <?php
 
-namespace Interactions\FormBundle\Entity;
+namespace Interactions\ValidationBundle\Entity;
 
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
