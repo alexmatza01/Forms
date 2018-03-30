@@ -1,0 +1,30 @@
+{
+  "name": "interactions/forms",
+  "type": "symfony-bundle",
+  "description": "Form Example",
+  "keywords": [
+    "form"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=7.1",
+    "interactions/validations": "dev-master"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~3.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Interactions\\FormBundle\\": ""
+    },
+    "exclude-from-classmap": [
+      "/Tests/"
+    ]
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/alexmatza01/Forms.git"
+    }
+  ]
+}
