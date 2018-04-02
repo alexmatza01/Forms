@@ -5,7 +5,7 @@ namespace Interactions\FormBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-use Interactions\FormBundle\ValidationBundle\Validator\Constraints as InteractionAssert;
+use Interactions\ValidationBundle\Validator\Constraints as InteractionAssert;
 /**
  * @ORM\Entity(repositoryClass="Interactions\FormBundle\Repository\DomoRepository")
  * @UniqueEntity("Email")
