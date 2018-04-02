@@ -7,6 +7,7 @@
  */
 
 namespace Interactions\FormBundle\Form\Type;
+
 use Interactions\FormBundle\Entity\Cities;
 use Interactions\FormBundle\Entity\Counties;
 use Interactions\FormBundle\Form\EventListener\AddNameFieldSubscriber;
@@ -29,45 +30,44 @@ class DomoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $formModifier = function (FormInterface $form, Counties $counties = null) {
-        $cities = null === $counties ? array() : $counties->getCities();
+            $cities = null === $counties ? array() : $counties->getCities();
 
-        $form->add('cities', EntityType::class, array(
-        'class' => 'App:Cities',
-        'label'=>'Oras*',
-        'choices'      => $cities,
-        'placeholder'  => '-- Oras --',
-        'choice_label' => function (Cities $cities) {
-            return $cities->getName();
-             }
-        ));
+            $form->add('cities', EntityType::class, array(
+                'class'        => 'InteractionsFormBundle:Cities',
+                'label'        => 'Oras*',
+                'choices'      => $cities,
+                'placeholder'  => '-- Oras --',
+                'choice_label' => function (Cities $cities) {
+                    return $cities->getName();
+                }
+            ));
         };
 
 
         $builder
-            ->add('Nume', TextType::class,['label'=>'Nume*'] )
-            ->add('Prenume', TextType::class,['label'=>'Prenume*'])
-            ->add('Email', EmailType::class,['label'=>'Email*'])
+            ->add('Nume', TextType::class, ['label' => 'Nume*'])
+            ->add('Prenume', TextType::class, ['label' => 'Prenume*'])
+            ->add('Email', EmailType::class, ['label' => 'Email*'])
             ->add('Adresare', ChoiceType::class, array(
-                'choices'  => array('Domnul' => 'Domnul', 'Doamna' => 'Doamna'),
-                'label'=>'Adresare*',
+                'choices' => array('Domnul' => 'Domnul', 'Doamna' => 'Doamna'),
+                'label'   => 'Adresare*',
             ))
             ->add('Parola', RepeatedType::class, array(
-                'type' => PasswordType::class,
-                'first_options' => array('label' => 'Parola*'),
+                'type'           => PasswordType::class,
+                'first_options'  => array('label' => 'Parola*'),
                 'second_options' => array('label' => 'Repeta Parola*')
             ))
-            ->add('Telefon', TextType::class,['label'=>'Telefon*'])
-
-            ->add('Adresa', TextType::class,['label'=>'Adresa*'])
+            ->add('Telefon', TextType::class, ['label' => 'Telefon*'])
+            ->add('Adresa', TextType::class, ['label' => 'Adresa*'])
             ->add('counties', EntityType::class, array(
-                'class' => 'App:Counties',
-                'label'=>'Judet*',
-                'placeholder'  => '-- Judet --',
+                'class'         => 'InteractionsFormBundle:Counties',
+                'label'         => 'Judet*',
+                'placeholder'   => '-- Judet --',
                 'query_builder' => function (EntityRepository $er) {
                     return $er->createQueryBuilder('j')
                         ->orderBy('j.name', 'ASC');
                 },
-                'choice_label' => function (Counties $counties) {
+                'choice_label'  => function (Counties $counties) {
                     return $counties->getName();
 
                 }
