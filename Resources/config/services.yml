@@ -1,0 +1,5 @@
+services:
+   Interactions\FormBundle\Repository\:
+       resource: '../../Repository'
+       autowire: true
+       tags: ['doctrine.repository_service']
