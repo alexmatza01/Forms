@@ -10,6 +10,7 @@ namespace Interactions\FormBundle\Form\Type;
 
 use Interactions\FormBundle\Entity\Cities;
 use Interactions\FormBundle\Entity\Counties;
+use Interactions\FormBundle\Entity\Domo;
 use Interactions\FormBundle\Form\EventListener\AddNameFieldSubscriber;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Form\AbstractType;
@@ -23,6 +24,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Interactions\FormBundle\Form\EventListener\AddSubmitFieldSubscriber;
 use Symfony\Component\Form\FormInterface;
 
 class DomoType extends AbstractType
