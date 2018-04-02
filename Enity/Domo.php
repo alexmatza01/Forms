@@ -7,7 +7,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Interactions\FormBundle\ValidationBundle\Validator\Constraints as InteractionAssert;
 /**
- * @ORM\Entity(repositoryClass="Interactions\Repository\DomoRepository")
+ * @ORM\Entity(repositoryClass="Interactions\FormBundle\Repository\DomoRepository")
  * @UniqueEntity("Email")
  */
 class Domo
@@ -182,7 +182,7 @@ class Domo
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Counties", inversedBy="domo")
+     * @ORM\ManyToOne(targetEntity="Interactions\FormBundle\Entity\Counties", inversedBy="domo")
      * @ORM\JoinColumn(nullable=true)
      */
     private $counties;
@@ -198,7 +198,7 @@ class Domo
     }
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Cities", inversedBy="domo")
+     * @ORM\ManyToOne(targetEntity="Interactions\FormBundle\Entity\Cities", inversedBy="domo")
      * @ORM\JoinColumn(nullable=true)
      */
     private $cities;

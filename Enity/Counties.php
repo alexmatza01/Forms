@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
 /**
- * @ORM\Entity(repositoryClass="Interactions\Repository\CountiesRepository")
+ * @ORM\Entity(repositoryClass="Interactions\FormBundle\Repository\CountiesRepository")
  */
 class Counties
 {
@@ -67,7 +67,7 @@ class Counties
     // ...
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Cities", mappedBy="counties")
+     * @ORM\OneToMany(targetEntity="Interactions\FormBundle\Entity\Cities", mappedBy="counties")
      * @ORM\OrderBy({"name"="ASC"})
      */
     private $cities;
@@ -88,7 +88,7 @@ class Counties
 
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Domo", mappedBy="counties")
+     * @ORM\OneToMany(targetEntity="Interactions\FormBundle\Entity\Domo", mappedBy="counties")
      */
     private $domo;
 

@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="Interactions\Repository\CitiesRepository")
+ * @ORM\Entity(repositoryClass="Interactions\FormBundle\Repository\CitiesRepository")
  */
 class Cities
 {
@@ -44,7 +44,7 @@ class Cities
     }
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Counties", inversedBy="cities")
+     * @ORM\ManyToOne(targetEntity="Interactions\FormBundle\Entity\Counties", inversedBy="cities")
      * @ORM\JoinColumn(nullable=true)
      */
     private $counties;
@@ -60,7 +60,7 @@ class Cities
     }
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Domo", mappedBy="cities")
+     * @ORM\OneToMany(targetEntity="Interactions\FormBundle\Entity\Domo", mappedBy="cities")
      */
     private $domo;
 
