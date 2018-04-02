@@ -6,7 +6,7 @@
  * Time: 11:28 AM
  */
 
-namespace Interactions\ValidationBundle;
+namespace Interactions\FormBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -14,3 +14,4 @@ class InteractionsFormBundle extends Bundle
 {
 
 }
+
