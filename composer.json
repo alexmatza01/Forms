@@ -24,7 +24,7 @@
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/alexmatza01/Forms.git"
+      "url": "https://github.com/macerier/validationbundle.git"
     }
   ]
 }
